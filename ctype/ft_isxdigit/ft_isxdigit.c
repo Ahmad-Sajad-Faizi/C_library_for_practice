@@ -1,0 +1,29 @@
+/*
+ * CONTRACT:	ft_isxdigit
+ * Input:	int c - ASCII value or EOF representing a single character.
+ * Output:	int   - Returns 1 if c is an hexadecimal digit character
+ * 			('0' - '9', 'A' - 'F' and 'a' - 'f');
+ * 			returns 0 otherwise.
+ * Edges:	Handles negative inputs, EOF, and values outside the ASCII
+ * 		range by returning 0.
+ */
+
+int	ft_isxdigit(int c)
+{
+	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'))
+		return(1);
+	else
+		return(0);
+}
+
+#include <unistd.h>
+int	main(void)
+{
+	int i;
+	char j;
+	i = ft_isxdigit('A');
+	j = i + '0';
+	write(1, &j, 1);
+	write(1, "\n", 1);
+	return(0);
+}
