@@ -14,15 +14,3 @@ int	ft_toupper(int c)
 	else
 		return(c);
 }
-
-#include <unistd.h>
-int	main(void)
-{
-	int i;
-	char j;
-	i = ft_toupper('x');
-	j = i;
-	write(1, &j, 1);
-	write(1, "\n", 1);
-	return (0);
-}

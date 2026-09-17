@@ -10,20 +10,5 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c<= 'z'))
-		return (1);
-	else
-		return(0);
-}
-
-#include <unistd.h>
-int	main(void)
-{
-	int i;
-	char c;
-	i = ft_isalpha('P');
-	c = i + '0';
-	write(1, &c, 1);
-	write(1, "\n", 1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c<= 'z'));
 }

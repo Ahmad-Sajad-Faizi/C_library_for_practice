@@ -11,22 +11,5 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z' ) || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z' ) || (c >= 'A' && c <= 'Z'));
 }
-
-#include <unistd.h>
-int	main(void)
-{
-	int i;
-	char result;
-
-	i = ft_isalnum('1');
-	result = i + '0';
-	write(1, &result, 1);
-	write(1, "\n", 1);
-	return 0;
-}
-
